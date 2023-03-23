@@ -2,6 +2,28 @@ import Link from "next/link"
 import style from "../../styles/Post.module.css"
 
 export default function Post({userId,id,title,body}){
+
+    const filterData=(n)=>{
+        let day=n
+        let mounth=['may','june','july',"august"]
+        let i=0;
+        if (n>31 &&n<=61) {
+            day-=31
+            i=1
+            
+        }else if(n>61 &&n<=92){
+            day-=61
+            i=2
+            
+        }else if(n>92){
+            day-=92
+            i=3
+            
+        }
+        
+
+        return `on ${day} ${mounth[i]} 2023`
+    }
     return<>
          <div className={style.wrapper}>
          <Link className={style.navigation} href="/">
@@ -16,7 +38,7 @@ export default function Post({userId,id,title,body}){
         <div className={style.main__container}>
             <div className={style.main__title}>{title}</div>
             <div className={style.main__user}>{`written by @user${userId} `}</div>
-            <div className={style.main__data}>{`on ${id} may 2023`}</div>
+            <div className={style.main__data}>{filterData(id)}</div>
             <div className={style.main__description}>{`${body}  `}</div>
         </div>
     </main>
