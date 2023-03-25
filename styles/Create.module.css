@@ -135,3 +135,22 @@
 	transform: translateY(-5px);
 	box-shadow: 10px 5px 10px black;
 }
+
+
+@media (max-width:700px) {
+	.wrapper{
+		flex-direction: column;
+		
+	}
+
+	.navigation{
+		max-width: 100%;
+		width: 100%;
+		border-bottom: 1px solid #6EEB83;
+		border-right: none;
+		height: 90px;
+	}
+	.logo{
+		width: 140%;
+	}
+}

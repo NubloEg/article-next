@@ -3,8 +3,6 @@
 	height: 100%;
 	display:flex;
 	align-items:center;
-	
-	
 }
 
 .navigation{
@@ -16,7 +14,6 @@
 	flex-direction: column;
 	justify-content:center ;
 	align-items:center;
-	
 }
 
 .navigation__container{
@@ -25,8 +22,8 @@
 	flex-direction: column;
 	align-items:center;
 	justify-content: space-between;
+	gap:20px;
 }
-
 .img{
 	width:80%;
 	border-radius: 50%;
@@ -37,12 +34,11 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-
 	transition: all 0.3s;
 	color: white;
 	text-transform: uppercase;
-	gap: 10px;
 	color:#6EEB83;
+width: 100%;
 }
 
 
@@ -51,7 +47,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width:60%;
+	width:70%;
 	transition: all 0.3s;
 }
 .search:hover{
@@ -63,9 +59,10 @@
 	visibility: hidden;
 	color: white;
 	width: 0%;
-	padding: 5px;
+	height: 0px;
+	padding: 0px;
 	background: #272727;
-	border: 1px solid #6EEB83;
+	border: 0px solid #6EEB83;
 	font-family: 'Lexend Deca';
 	font-style: normal;
 	font-weight: 300;
@@ -75,12 +72,21 @@
 }
 
 .search__active{
+	margin-top: 10px;
+	display: block;
 	visibility: visible;
 	width: 90%;
+	height: 100%;
+	padding: 5px;
+	border: 1px solid #6EEB83;
 }
 
 .create{
 	width:60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
 	transition: all 0.3s;
 }
 .create:hover{
@@ -88,6 +94,14 @@
 	filter:brightness(10);
 
 }
+
+
+/* 
+@media screen and (orientation: landscape){
+	.img{
+		width: 50%;
+	}
+} */
 
 .main{
 	display: flex;
@@ -99,6 +113,8 @@
 	overflow:auto;
 	
 }
+
+
 
 .articles{
 
@@ -196,3 +212,130 @@
 .post__description a{
 	color: #6EEB83;
 }
+
+@media (max-width:900px) {
+
+	.main{
+		padding:70px 15px;
+	}
+	.post__data{
+		font-size: 48px;
+		line-height: 40px;
+	}
+	
+	.post__user{
+		font-size: 24px;
+		line-height: 20px;
+	}
+	
+	.post__title{
+	font-size: 48px;
+	line-height: 44px;
+	-webkit-line-clamp: 2; /* Число отображаемых строк */
+	display: -webkit-box; /* Включаем флексбоксы */
+	-webkit-box-orient: vertical; /* Вертикальная ориентация */
+	overflow: hidden; /* Обрезаем всё за пределами блока */
+	
+	}
+	
+	.post__description{
+		font-size: 30px;
+		line-height: 35px;
+	}
+}
+
+
+@media (max-width:1200px) {
+
+
+
+
+	.main{
+		padding:70px 15px;
+	}
+	.post__data{
+		font-size: 32px;
+	
+	}
+	
+	.post__user{
+		font-size: 24px;
+		
+	}
+	
+	.post__title{
+		font-size: 32px;
+
+	}
+
+}
+
+
+@media (max-width:750px) {
+
+	.wrapper{
+		flex-direction: column;
+		
+	}
+	
+	.navigation{
+		max-width: 100%;
+		width: 100%;
+		border-bottom: 1px solid #6EEB83;
+		border-right:none;
+		height: 150px;
+		margin: 20px;
+	}
+	
+	.navigation__container{
+		
+		width:80%;
+		flex-direction: row;
+	}
+
+	.main{
+		
+		padding:0px 15px;
+	}
+	
+	.search{
+	
+		width:70%;
+		
+	}
+	
+
+}
+
+
+
+@media (max-width:440px) {
+	.articles{
+		
+		gap:10px;
+	}
+
+	.post{
+		max-height:200px;
+	}
+	
+	.post__data{
+		font-size: 20px;
+	
+	}
+	
+	.post__user{
+		font-size: 18px;
+		
+	}
+	
+	.post__title{
+		font-size: 24px;
+	}
+	.post__description{
+		font-size: 20px;
+		line-height: 35px;
+	}
+
+}
+

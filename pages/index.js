@@ -32,9 +32,11 @@ export default function Home(posts){
                     <img className={style.img}  src="/logo.png" alt="logo"/>
 
                 </Link>
-                <Link className={`${style.logo} ${style.create}`} href={"/create"}>
-                    <img className={`${style.img}`}  src="/add_circle.svg" alt="create"/>
-                    <div> Создать</div>
+                <Link className={`${style.logo} `} href={"/create"}>
+                   <div className={`${style.create}`}>  
+                   <img className={`${style.img}`}  src="/add_circle.svg" alt="create"/>
+                    <div> Создать</div></div>
+                 
                 </Link>
             </div>
         </nav>
