@@ -34,7 +34,7 @@ export default function Home(posts){
                 </Link>
                 <Link className={`${style.logo} `} href={"/create"}>
                    <div className={`${style.create}`}>  
-                   <img className={`${style.img}`}  src="/add_circle.svg" alt="create"/>
+                    <img className={`${style.img}`}  src="/add_circle.svg" alt="create"/>
                     <div> Создать</div></div>
                  
                 </Link>
